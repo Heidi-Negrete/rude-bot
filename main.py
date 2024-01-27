@@ -20,7 +20,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$****off'):
+    if message.content.startswith('$fuckoff'):
         await message.channel.send('Kindly fuck off.')
 
     if 'fuck' in message.content.replace(" ", "").lower():
