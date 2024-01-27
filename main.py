@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import config
+import foas
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -8,6 +9,8 @@ intents.emojis = True
 intents.reactions = True
 
 client = discord.Client(intents=intents)
+
+fucks = foas.Foas()
 
 
 @client.event
@@ -21,7 +24,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('$****off'):
-        await message.channel.send('Kindly fuck off.')
+        await message.channel.send(fucks.give_fuck())
 
     if 'fuck' in message.content.replace(" ", "").lower():
         await message.add_reaction("🖕")
